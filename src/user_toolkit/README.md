@@ -56,4 +56,5 @@ If you do decide to develop and add your own functionalities and need to reload 
 ```python
 import my_module
 from imp import reload
+reload(my_module)
 ```
