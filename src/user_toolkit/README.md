@@ -24,7 +24,6 @@ Custom Maya tool shelf for quick access to often used utility functions and tool
 ### To Load Custom Maya Tool shelf
 ```python
 from user_toolkit.shelves import shelf_user_utils
-reload(shelf_user_utils)
 shelf_user_utils.load(name="user_utils")
 ```
 
@@ -57,5 +56,4 @@ If you do decide to develop and add your own functionalities and need to reload 
 ```python
 import my_module
 from imp import reload
-reload(my_module)
 ```

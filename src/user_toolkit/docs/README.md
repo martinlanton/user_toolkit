@@ -27,7 +27,6 @@ Contain various Python scripts with functions to aid various tasks in Maya.
 Custom Maya tool shelf for quick access to often used utility functions and tools.
 #### To Load Custom Maya Tool shelf
     from user_toolkit.shelves import shelf_user_utils
-    reload(shelf_user_utils)
     shelf_user_utils.load(name="user_utils")
 
 
@@ -50,7 +49,6 @@ Add these lines to your `<USER>/Documents/maya/scripts/userSetup.py` file
 Custom Maya Marking Menu for quick access to often used utility functions and tools.  Use RMB + CTL + ALT to invoke marking menu in Maya.
 #### To Load Custom Marking menu
     from user_toolkit.marking_menu import user_marking_menu
-    reload(user_marking_menu)
     user_marking_menu.markingMenu()
 ##
 

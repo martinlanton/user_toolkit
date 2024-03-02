@@ -4,7 +4,6 @@
     To use, run these Python commands in Maya:
 
         from user_toolkit.shelves import shelf_user_utils
-        reload(shelf_user_utils)
         shelf_user_utils.load(name="user_utils")
 
 """
@@ -23,12 +22,10 @@ import subprocess
 
 # Inherit shelf base class module whose functions we "override" to build our user_toolkit shelf
 from user_toolkit.shelves import shelf_base
-reload(shelf_base)
 
 
 # Import the week6 module whose commands we call in the week6 shelf button
 from user_toolkit.utils import week6
-reload(week6)
 
 
 # Import maya modules
@@ -53,6 +50,7 @@ def explore_maya_project():
 def reload_shelf(shelf_name=SHELF_NAME):
     """Reloads shelf"""
     try:
+        from imp import reload
         import shelf_base
         reload(shelf_base)
 
@@ -71,7 +69,6 @@ def reload_shelf(shelf_name=SHELF_NAME):
 def setup_user_marking_menu():
 
     from user_toolkit.marking_menu import user_marking_menu
-    reload(user_marking_menu)
     user_marking_menu.markingMenu()
 
     LOG.info("Setup User Marking Menu")
